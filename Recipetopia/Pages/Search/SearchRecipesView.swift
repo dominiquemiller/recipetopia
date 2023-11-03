@@ -8,28 +8,45 @@
 import SwiftUI
 
 struct SearchRecipesView: View {
-    @StateObject var viewModel: SearchRecipesViewModel
+    @EnvironmentObject var viewModel: RecipesViewModel
+    
     var body: some View {
-        List(viewModel.recipes) { recipe in
-            NavigationLink {
-                Text("Damn! I'm here")
-            } label: {
-                VStack {
-                    Text(recipe.title)
-                    AsyncImage(url: recipe.image)
+        VStack {
+            HStack {
+                Picker(selection: self.$viewModel.dietSelected, label: Text("Diet:")) {
+                    Text("Vegetarian").tag("vegetarian")
+                    Text("Vegan").tag("vegan")
+                    Text("Paleo").tag("paleo")
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                
+                Button(action: { viewModel.dietSelected = "none" }, label: { Text("Clear") })
+            }
+            .padding(.horizontal)
+            
+            List(viewModel.recipes) { recipe in
+                NavigationLink {
+                    RecipeDetailView(viewModel: RecipeDetailViewModel(id: recipe.id, service: SpoonacularAPI())) { self.viewModel.updateSavedRecipe(recipe: $0, saved: $1)}
+                } label: {
+                    CardView(recipe: recipe)
+                        .onAppear {
+                            if viewModel.shouldLoadData(currentItem: recipe) {
+                                viewModel.loadMoreRecipes()
+                            }
+                        }
+                }
+                
+                if viewModel.viewState == .searching {
+                    ProgressView()
                 }
             }
-            .onAppear {
-                print("onAppear for recipe: \(recipe.title), \(recipe.id)")
-                if viewModel.shouldLoadData(for: recipe.id) {
-                    
-                }
-            }
+            .searchable(text: $viewModel.searchKeyword, prompt: "Find something yummy!")
+            .navigationTitle("Search Recipes")
         }
-        .searchable(text: $viewModel.searchKeyword, prompt: "Find something yummy!")
     }
 }
 
 #Preview {
-    SearchRecipesView(viewModel: SearchRecipesViewModel(service: SpoonacularAPI()))
+    SearchRecipesView()
+        .environmentObject(RecipesViewModel(service: SpoonacularAPI()))
 }

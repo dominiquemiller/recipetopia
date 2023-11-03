@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// Decode json data and make availble to previews
+// Only to be used for previews
 struct PreviewDataWrapper<T: Decodable, Content: View>: View {
     let content: (T) -> Content
     var filename: String

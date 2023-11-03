@@ -30,6 +30,13 @@ class SpoonacularAPI: RecipeService {
     }
     
     func recipe(with id: Int) -> AnyPublisher<Recipe, Error> {
+        // Always return cached recipe if available
+        if let recipe = CacheManager.shared.savedRecipes.first(where: { $0.id == id }) {
+            return Future<Recipe, Error> { promise in
+                promise(.success(recipe))
+            }.eraseToAnyPublisher()
+        }
+        
         let route = SpoonacularAPIRouter.recipe(id: id, nutritionInformation: true)
         
         guard let request = buildRequest(for: route) else {
@@ -93,7 +100,7 @@ class SpoonacularAPI: RecipeService {
             urlComponents.queryItems = encode(queryParams: params)
         }
         
-        guard var url = urlComponents.url else { return nil }
+        guard let url = urlComponents.url else { return nil }
         
         return URLRequest(url: url)
     }

@@ -22,13 +22,16 @@ enum SpoonacularAPIRouter {
     
     var queryParams: requestQueryParams? {
         // Never do this in production! Opted for simplicity for the time limit we have.
-        // Ideally we can place this in info.plist or download from backend.
-        let apiKey = "6d8c11ea63054dd7be1c17fa59f77040"
+        let apiKey = Bundle.main.object(forInfoDictionaryKey: "SpoonAPIKey") as? String ?? ""
         let recipesPerPage = 20
+        
         switch self {
             case .seachRecipes(let query, let filterByDiet, let page):
-                guard let filterByDiet else { return [ "query" : query, "apiKey" : apiKey, "number" : recipesPerPage, "offset" : (page * recipesPerPage) ] }
-                return [ "query" : query, "diet" : filterByDiet ]
+                let offSet = page == 0 ? recipesPerPage : page * recipesPerPage
+                guard let filterByDiet = filterByDiet else {
+                    return [ "query" : query, "apiKey" : apiKey, "number" : recipesPerPage, "offset" : offSet ]
+                }
+                return [ "query" : query, "diet" : filterByDiet, "apiKey" : apiKey, "number" : recipesPerPage, "offset" : offSet ]
             case .recipe(_, let nutritionInformation): return [ "includeNutrition" : nutritionInformation, "apiKey" : apiKey ]
         }
     }

@@ -12,7 +12,7 @@
 		04B0262A2AF3E41B002EFB0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B026292AF3E41B002EFB0A /* Assets.xcassets */; };
 		04B0262D2AF3E41B002EFB0A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B0262C2AF3E41B002EFB0A /* Preview Assets.xcassets */; };
 		04B0263A2AF3EE10002EFB0A /* SearchRecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B026392AF3EE10002EFB0A /* SearchRecipesView.swift */; };
-		04B0263D2AF3EFBA002EFB0A /* SearchRecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0263C2AF3EFBA002EFB0A /* SearchRecipesViewModel.swift */; };
+		04B0263D2AF3EFBA002EFB0A /* RecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0263C2AF3EFBA002EFB0A /* RecipesViewModel.swift */; };
 		04B0263F2AF3F001002EFB0A /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0263E2AF3F001002EFB0A /* Recipe.swift */; };
 		04B026422AF3F3FA002EFB0A /* searchRecipes.json in Resources */ = {isa = PBXBuildFile; fileRef = 04B026412AF3F3FA002EFB0A /* searchRecipes.json */; };
 		04B026452AF3F46A002EFB0A /* PreviewDataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B026442AF3F46A002EFB0A /* PreviewDataWrapper.swift */; };
@@ -22,10 +22,12 @@
 		04B0264E2AF406A8002EFB0A /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0264D2AF406A8002EFB0A /* RecipeDetailView.swift */; };
 		04B026502AF406C8002EFB0A /* RecipeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0264F2AF406C8002EFB0A /* RecipeDetailViewModel.swift */; };
 		04B026582AF40A8C002EFB0A /* RecipetopiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B026572AF40A8C002EFB0A /* RecipetopiaTests.swift */; };
-		04B026602AF40B9F002EFB0A /* SavedRecipeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0265F2AF40B9F002EFB0A /* SavedRecipeManager.swift */; };
 		04B026622AF41C4A002EFB0A /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B026612AF41C4A002EFB0A /* RecipeService.swift */; };
 		04B026652AF42832002EFB0A /* SpoonacularAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B026642AF42832002EFB0A /* SpoonacularAPIRouter.swift */; };
 		04B026672AF42861002EFB0A /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B026662AF42861002EFB0A /* APIError.swift */; };
+		04B0266C2AF4AF08002EFB0A /* SavedRecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0266B2AF4AF08002EFB0A /* SavedRecipesView.swift */; };
+		04E08CD42AF4B6B80069E83B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E08CD32AF4B6B80069E83B /* CardView.swift */; };
+		04E08CD82AF51DBB0069E83B /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E08CD72AF51DBB0069E83B /* CacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +47,7 @@
 		04B026292AF3E41B002EFB0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04B0262C2AF3E41B002EFB0A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		04B026392AF3EE10002EFB0A /* SearchRecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecipesView.swift; sourceTree = "<group>"; };
-		04B0263C2AF3EFBA002EFB0A /* SearchRecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecipesViewModel.swift; sourceTree = "<group>"; };
+		04B0263C2AF3EFBA002EFB0A /* RecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewModel.swift; sourceTree = "<group>"; };
 		04B0263E2AF3F001002EFB0A /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		04B026412AF3F3FA002EFB0A /* searchRecipes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = searchRecipes.json; sourceTree = "<group>"; };
 		04B026442AF3F46A002EFB0A /* PreviewDataWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewDataWrapper.swift; sourceTree = "<group>"; };
@@ -56,10 +58,13 @@
 		04B0264F2AF406C8002EFB0A /* RecipeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewModel.swift; sourceTree = "<group>"; };
 		04B026552AF40A8C002EFB0A /* RecipetopiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipetopiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B026572AF40A8C002EFB0A /* RecipetopiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipetopiaTests.swift; sourceTree = "<group>"; };
-		04B0265F2AF40B9F002EFB0A /* SavedRecipeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipeManager.swift; sourceTree = "<group>"; };
 		04B026612AF41C4A002EFB0A /* RecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
 		04B026642AF42832002EFB0A /* SpoonacularAPIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoonacularAPIRouter.swift; sourceTree = "<group>"; };
 		04B026662AF42861002EFB0A /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		04B0266B2AF4AF08002EFB0A /* SavedRecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesView.swift; sourceTree = "<group>"; };
+		04E08CD32AF4B6B80069E83B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		04E08CD52AF4BD470069E83B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		04E08CD72AF51DBB0069E83B /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,12 +106,14 @@
 		04B026242AF3E41A002EFB0A /* Recipetopia */ = {
 			isa = PBXGroup;
 			children = (
-				04B026632AF42819002EFB0A /* Networking */,
-				04B0265E2AF40B87002EFB0A /* Managers */,
-				04B026432AF3F458002EFB0A /* Helpers */,
-				04B026362AF3EDB5002EFB0A /* Models */,
-				04B026332AF3ED8F002EFB0A /* Pages */,
+				04E08CD52AF4BD470069E83B /* Info.plist */,
 				04B026252AF3E41A002EFB0A /* RecipetopiaApp.swift */,
+				04B026432AF3F458002EFB0A /* Helpers */,
+				04E08CD62AF51DA90069E83B /* Managers */,
+				04B026362AF3EDB5002EFB0A /* Models */,
+				04B026632AF42819002EFB0A /* Networking */,
+				04B026332AF3ED8F002EFB0A /* Pages */,
+				04E08CD22AF4B6A30069E83B /* Views */,
 				04B026292AF3E41B002EFB0A /* Assets.xcassets */,
 				04B0262B2AF3E41B002EFB0A /* Preview Content */,
 			);
@@ -138,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				04B026392AF3EE10002EFB0A /* SearchRecipesView.swift */,
-				04B0263C2AF3EFBA002EFB0A /* SearchRecipesViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -146,6 +152,7 @@
 		04B026352AF3EDA9002EFB0A /* Saved Recipes */ = {
 			isa = PBXGroup;
 			children = (
+				04B0266B2AF4AF08002EFB0A /* SavedRecipesView.swift */,
 			);
 			path = "Saved Recipes";
 			sourceTree = "<group>";
@@ -164,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				04B026272AF3E41A002EFB0A /* ContentView.swift */,
+				04B0263C2AF3EFBA002EFB0A /* RecipesViewModel.swift */,
 			);
 			path = ContentView;
 			sourceTree = "<group>";
@@ -193,14 +201,6 @@
 			path = RecipetopiaTests;
 			sourceTree = "<group>";
 		};
-		04B0265E2AF40B87002EFB0A /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				04B0265F2AF40B9F002EFB0A /* SavedRecipeManager.swift */,
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
 		04B026632AF42819002EFB0A /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +209,22 @@
 				04B026662AF42861002EFB0A /* APIError.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		04E08CD22AF4B6A30069E83B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04E08CD32AF4B6B80069E83B /* CardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		04E08CD62AF51DA90069E83B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				04E08CD72AF51DBB0069E83B /* CacheManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,17 +329,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04B026602AF40B9F002EFB0A /* SavedRecipeManager.swift in Sources */,
+				04B0266C2AF4AF08002EFB0A /* SavedRecipesView.swift in Sources */,
 				04B026652AF42832002EFB0A /* SpoonacularAPIRouter.swift in Sources */,
 				04B026452AF3F46A002EFB0A /* PreviewDataWrapper.swift in Sources */,
 				04B0264E2AF406A8002EFB0A /* RecipeDetailView.swift in Sources */,
-				04B0263D2AF3EFBA002EFB0A /* SearchRecipesViewModel.swift in Sources */,
+				04E08CD42AF4B6B80069E83B /* CardView.swift in Sources */,
+				04B0263D2AF3EFBA002EFB0A /* RecipesViewModel.swift in Sources */,
 				04B026502AF406C8002EFB0A /* RecipeDetailViewModel.swift in Sources */,
 				04B026282AF3E41A002EFB0A /* ContentView.swift in Sources */,
 				04B026262AF3E41A002EFB0A /* RecipetopiaApp.swift in Sources */,
 				04B026622AF41C4A002EFB0A /* RecipeService.swift in Sources */,
 				04B026492AF3FE8D002EFB0A /* Ingredient.swift in Sources */,
 				04B026472AF3F4AD002EFB0A /* SearchResults.swift in Sources */,
+				04E08CD82AF51DBB0069E83B /* CacheManager.swift in Sources */,
 				04B0263A2AF3EE10002EFB0A /* SearchRecipesView.swift in Sources */,
 				04B0263F2AF3F001002EFB0A /* Recipe.swift in Sources */,
 				04B026672AF42861002EFB0A /* APIError.swift in Sources */,
@@ -479,6 +497,9 @@
 				DEVELOPMENT_TEAM = BYL85329NX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Recipetopia/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Recipetopia;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -491,9 +512,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.domsBiz.Recipetopia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -508,6 +532,9 @@
 				DEVELOPMENT_TEAM = BYL85329NX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Recipetopia/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Recipetopia;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -520,9 +547,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.domsBiz.Recipetopia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -7,18 +7,34 @@
 
 import Foundation
 
-struct Recipe: Codable, Identifiable {
+struct Nutrient: Codable {
+    let name: String
+    let amount: Double
+    let unit: String
+    let percentOfDailyNeeds: Double
+}
+
+struct Nutrition: Codable {
+    let nutrients: [Nutrient]
+}
+
+struct Recipe: Codable, Identifiable, Equatable {
+    static func == (lhs: Recipe, rhs: Recipe) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
     let id: Int
     let title: String
     let image: URL?
     let servings: Int?
     let readyInMinutes: Int?
     let extendedIngredients: [Ingredient]?
-    let summary: String?
+    let nutrition: Nutrition?
+    let instructions: String?
     let vegan: Bool?
     let vegetarian: Bool?
     let veryHealthy: Bool?
-    let veryPopular: Bool?
+    var saved: Bool = false
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -32,11 +48,11 @@ struct Recipe: Codable, Identifiable {
         
         self.servings = try container.decodeIfPresent(Int.self, forKey: .servings)
         self.readyInMinutes = try container.decodeIfPresent(Int.self, forKey: .readyInMinutes)
-        self.summary = try container.decodeIfPresent(String.self, forKey: .summary)
+        self.instructions = try container.decodeIfPresent(String.self, forKey: .instructions)
         self.vegan = try container.decodeIfPresent(Bool.self, forKey: .vegan)
         self.vegetarian = try container.decodeIfPresent(Bool.self, forKey: .vegetarian)
         self.veryHealthy = try container.decodeIfPresent(Bool.self, forKey: .veryHealthy)
-        self.veryPopular = try container.decodeIfPresent(Bool.self, forKey: .veryPopular)
         self.extendedIngredients = try container.decodeIfPresent([Ingredient].self, forKey: .extendedIngredients)
+        self.nutrition = try container.decodeIfPresent(Nutrition.self, forKey: .nutrition)
     }
 }
