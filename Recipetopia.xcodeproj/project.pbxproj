@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04B026262AF3E41A002EFB0A /* RecipetopiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B026252AF3E41A002EFB0A /* RecipetopiaApp.swift */; };
+		04B026282AF3E41A002EFB0A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B026272AF3E41A002EFB0A /* ContentView.swift */; };
+		04B0262A2AF3E41B002EFB0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B026292AF3E41B002EFB0A /* Assets.xcassets */; };
+		04B0262D2AF3E41B002EFB0A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B0262C2AF3E41B002EFB0A /* Preview Assets.xcassets */; };
+		04B0263A2AF3EE10002EFB0A /* SearchRecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B026392AF3EE10002EFB0A /* SearchRecipesView.swift */; };
+		04B0263D2AF3EFBA002EFB0A /* SearchRecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0263C2AF3EFBA002EFB0A /* SearchRecipesViewModel.swift */; };
+		04B0263F2AF3F001002EFB0A /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0263E2AF3F001002EFB0A /* Recipe.swift */; };
+		04B026422AF3F3FA002EFB0A /* searchRecipes.json in Resources */ = {isa = PBXBuildFile; fileRef = 04B026412AF3F3FA002EFB0A /* searchRecipes.json */; };
+		04B026452AF3F46A002EFB0A /* PreviewDataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B026442AF3F46A002EFB0A /* PreviewDataWrapper.swift */; };
+		04B026472AF3F4AD002EFB0A /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B026462AF3F4AD002EFB0A /* SearchResults.swift */; };
+		04B026492AF3FE8D002EFB0A /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B026482AF3FE8D002EFB0A /* Ingredient.swift */; };
+		04B0264B2AF3FFF3002EFB0A /* recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 04B0264A2AF3FFF3002EFB0A /* recipe.json */; };
+		04B0264E2AF406A8002EFB0A /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0264D2AF406A8002EFB0A /* RecipeDetailView.swift */; };
+		04B026502AF406C8002EFB0A /* RecipeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0264F2AF406C8002EFB0A /* RecipeDetailViewModel.swift */; };
+		04B026582AF40A8C002EFB0A /* RecipetopiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B026572AF40A8C002EFB0A /* RecipetopiaTests.swift */; };
+		04B026602AF40B9F002EFB0A /* SavedRecipeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0265F2AF40B9F002EFB0A /* SavedRecipeManager.swift */; };
+		04B026622AF41C4A002EFB0A /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B026612AF41C4A002EFB0A /* RecipeService.swift */; };
+		04B026652AF42832002EFB0A /* SpoonacularAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B026642AF42832002EFB0A /* SpoonacularAPIRouter.swift */; };
+		04B026672AF42861002EFB0A /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B026662AF42861002EFB0A /* APIError.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04B026592AF40A8C002EFB0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04B0261A2AF3E41A002EFB0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04B026212AF3E41A002EFB0A;
+			remoteInfo = Recipetopia;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04B026222AF3E41A002EFB0A /* Recipetopia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipetopia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04B026252AF3E41A002EFB0A /* RecipetopiaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipetopiaApp.swift; sourceTree = "<group>"; };
+		04B026272AF3E41A002EFB0A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		04B026292AF3E41B002EFB0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04B0262C2AF3E41B002EFB0A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		04B026392AF3EE10002EFB0A /* SearchRecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecipesView.swift; sourceTree = "<group>"; };
+		04B0263C2AF3EFBA002EFB0A /* SearchRecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecipesViewModel.swift; sourceTree = "<group>"; };
+		04B0263E2AF3F001002EFB0A /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		04B026412AF3F3FA002EFB0A /* searchRecipes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = searchRecipes.json; sourceTree = "<group>"; };
+		04B026442AF3F46A002EFB0A /* PreviewDataWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewDataWrapper.swift; sourceTree = "<group>"; };
+		04B026462AF3F4AD002EFB0A /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
+		04B026482AF3FE8D002EFB0A /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		04B0264A2AF3FFF3002EFB0A /* recipe.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = recipe.json; sourceTree = "<group>"; };
+		04B0264D2AF406A8002EFB0A /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
+		04B0264F2AF406C8002EFB0A /* RecipeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewModel.swift; sourceTree = "<group>"; };
+		04B026552AF40A8C002EFB0A /* RecipetopiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipetopiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04B026572AF40A8C002EFB0A /* RecipetopiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipetopiaTests.swift; sourceTree = "<group>"; };
+		04B0265F2AF40B9F002EFB0A /* SavedRecipeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipeManager.swift; sourceTree = "<group>"; };
+		04B026612AF41C4A002EFB0A /* RecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
+		04B026642AF42832002EFB0A /* SpoonacularAPIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoonacularAPIRouter.swift; sourceTree = "<group>"; };
+		04B026662AF42861002EFB0A /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04B0261F2AF3E41A002EFB0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04B026522AF40A8C002EFB0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04B026192AF3E41A002EFB0A = {
+			isa = PBXGroup;
+			children = (
+				04B026242AF3E41A002EFB0A /* Recipetopia */,
+				04B026562AF40A8C002EFB0A /* RecipetopiaTests */,
+				04B026232AF3E41A002EFB0A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04B026232AF3E41A002EFB0A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04B026222AF3E41A002EFB0A /* Recipetopia.app */,
+				04B026552AF40A8C002EFB0A /* RecipetopiaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04B026242AF3E41A002EFB0A /* Recipetopia */ = {
+			isa = PBXGroup;
+			children = (
+				04B026632AF42819002EFB0A /* Networking */,
+				04B0265E2AF40B87002EFB0A /* Managers */,
+				04B026432AF3F458002EFB0A /* Helpers */,
+				04B026362AF3EDB5002EFB0A /* Models */,
+				04B026332AF3ED8F002EFB0A /* Pages */,
+				04B026252AF3E41A002EFB0A /* RecipetopiaApp.swift */,
+				04B026292AF3E41B002EFB0A /* Assets.xcassets */,
+				04B0262B2AF3E41B002EFB0A /* Preview Content */,
+			);
+			path = Recipetopia;
+			sourceTree = "<group>";
+		};
+		04B0262B2AF3E41B002EFB0A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				04B026412AF3F3FA002EFB0A /* searchRecipes.json */,
+				04B0264A2AF3FFF3002EFB0A /* recipe.json */,
+				04B0262C2AF3E41B002EFB0A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		04B026332AF3ED8F002EFB0A /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				04B0264C2AF40695002EFB0A /* DetailView */,
+				04B026372AF3EDC7002EFB0A /* ContentView */,
+				04B026352AF3EDA9002EFB0A /* Saved Recipes */,
+				04B026342AF3ED9F002EFB0A /* Search */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		04B026342AF3ED9F002EFB0A /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				04B026392AF3EE10002EFB0A /* SearchRecipesView.swift */,
+				04B0263C2AF3EFBA002EFB0A /* SearchRecipesViewModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		04B026352AF3EDA9002EFB0A /* Saved Recipes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Saved Recipes";
+			sourceTree = "<group>";
+		};
+		04B026362AF3EDB5002EFB0A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04B0263E2AF3F001002EFB0A /* Recipe.swift */,
+				04B026462AF3F4AD002EFB0A /* SearchResults.swift */,
+				04B026482AF3FE8D002EFB0A /* Ingredient.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		04B026372AF3EDC7002EFB0A /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				04B026272AF3E41A002EFB0A /* ContentView.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		04B026432AF3F458002EFB0A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				04B026442AF3F46A002EFB0A /* PreviewDataWrapper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		04B0264C2AF40695002EFB0A /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				04B0264D2AF406A8002EFB0A /* RecipeDetailView.swift */,
+				04B0264F2AF406C8002EFB0A /* RecipeDetailViewModel.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		04B026562AF40A8C002EFB0A /* RecipetopiaTests */ = {
+			isa = PBXGroup;
+			children = (
+				04B026572AF40A8C002EFB0A /* RecipetopiaTests.swift */,
+			);
+			path = RecipetopiaTests;
+			sourceTree = "<group>";
+		};
+		04B0265E2AF40B87002EFB0A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				04B0265F2AF40B9F002EFB0A /* SavedRecipeManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		04B026632AF42819002EFB0A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				04B026612AF41C4A002EFB0A /* RecipeService.swift */,
+				04B026642AF42832002EFB0A /* SpoonacularAPIRouter.swift */,
+				04B026662AF42861002EFB0A /* APIError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04B026212AF3E41A002EFB0A /* Recipetopia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04B026302AF3E41B002EFB0A /* Build configuration list for PBXNativeTarget "Recipetopia" */;
+			buildPhases = (
+				04B0261E2AF3E41A002EFB0A /* Sources */,
+				04B0261F2AF3E41A002EFB0A /* Frameworks */,
+				04B026202AF3E41A002EFB0A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Recipetopia;
+			productName = Recipetopia;
+			productReference = 04B026222AF3E41A002EFB0A /* Recipetopia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04B026542AF40A8C002EFB0A /* RecipetopiaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04B0265B2AF40A8C002EFB0A /* Build configuration list for PBXNativeTarget "RecipetopiaTests" */;
+			buildPhases = (
+				04B026512AF40A8C002EFB0A /* Sources */,
+				04B026522AF40A8C002EFB0A /* Frameworks */,
+				04B026532AF40A8C002EFB0A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04B0265A2AF40A8C002EFB0A /* PBXTargetDependency */,
+			);
+			name = RecipetopiaTests;
+			productName = RecipetopiaTests;
+			productReference = 04B026552AF40A8C002EFB0A /* RecipetopiaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04B0261A2AF3E41A002EFB0A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					04B026212AF3E41A002EFB0A = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					04B026542AF40A8C002EFB0A = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 04B026212AF3E41A002EFB0A;
+					};
+				};
+			};
+			buildConfigurationList = 04B0261D2AF3E41A002EFB0A /* Build configuration list for PBXProject "Recipetopia" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04B026192AF3E41A002EFB0A;
+			productRefGroup = 04B026232AF3E41A002EFB0A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04B026212AF3E41A002EFB0A /* Recipetopia */,
+				04B026542AF40A8C002EFB0A /* RecipetopiaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04B026202AF3E41A002EFB0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04B026422AF3F3FA002EFB0A /* searchRecipes.json in Resources */,
+				04B0262D2AF3E41B002EFB0A /* Preview Assets.xcassets in Resources */,
+				04B0262A2AF3E41B002EFB0A /* Assets.xcassets in Resources */,
+				04B0264B2AF3FFF3002EFB0A /* recipe.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04B026532AF40A8C002EFB0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04B0261E2AF3E41A002EFB0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04B026602AF40B9F002EFB0A /* SavedRecipeManager.swift in Sources */,
+				04B026652AF42832002EFB0A /* SpoonacularAPIRouter.swift in Sources */,
+				04B026452AF3F46A002EFB0A /* PreviewDataWrapper.swift in Sources */,
+				04B0264E2AF406A8002EFB0A /* RecipeDetailView.swift in Sources */,
+				04B0263D2AF3EFBA002EFB0A /* SearchRecipesViewModel.swift in Sources */,
+				04B026502AF406C8002EFB0A /* RecipeDetailViewModel.swift in Sources */,
+				04B026282AF3E41A002EFB0A /* ContentView.swift in Sources */,
+				04B026262AF3E41A002EFB0A /* RecipetopiaApp.swift in Sources */,
+				04B026622AF41C4A002EFB0A /* RecipeService.swift in Sources */,
+				04B026492AF3FE8D002EFB0A /* Ingredient.swift in Sources */,
+				04B026472AF3F4AD002EFB0A /* SearchResults.swift in Sources */,
+				04B0263A2AF3EE10002EFB0A /* SearchRecipesView.swift in Sources */,
+				04B0263F2AF3F001002EFB0A /* Recipe.swift in Sources */,
+				04B026672AF42861002EFB0A /* APIError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04B026512AF40A8C002EFB0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04B026582AF40A8C002EFB0A /* RecipetopiaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04B0265A2AF40A8C002EFB0A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04B026212AF3E41A002EFB0A /* Recipetopia */;
+			targetProxy = 04B026592AF40A8C002EFB0A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		04B0262E2AF3E41B002EFB0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		04B0262F2AF3E41B002EFB0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04B026312AF3E41B002EFB0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Recipetopia/Preview Content\"";
+				DEVELOPMENT_TEAM = BYL85329NX;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.domsBiz.Recipetopia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04B026322AF3E41B002EFB0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Recipetopia/Preview Content\"";
+				DEVELOPMENT_TEAM = BYL85329NX;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.domsBiz.Recipetopia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		04B0265C2AF40A8C002EFB0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BYL85329NX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.domsBiz.RecipetopiaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipetopia.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Recipetopia";
+			};
+			name = Debug;
+		};
+		04B0265D2AF40A8C002EFB0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BYL85329NX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.domsBiz.RecipetopiaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Recipetopia.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Recipetopia";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04B0261D2AF3E41A002EFB0A /* Build configuration list for PBXProject "Recipetopia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04B0262E2AF3E41B002EFB0A /* Debug */,
+				04B0262F2AF3E41B002EFB0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04B026302AF3E41B002EFB0A /* Build configuration list for PBXNativeTarget "Recipetopia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04B026312AF3E41B002EFB0A /* Debug */,
+				04B026322AF3E41B002EFB0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04B0265B2AF40A8C002EFB0A /* Build configuration list for PBXNativeTarget "RecipetopiaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04B0265C2AF40A8C002EFB0A /* Debug */,
+				04B0265D2AF40A8C002EFB0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04B0261A2AF3E41A002EFB0A /* Project object */;
+}
