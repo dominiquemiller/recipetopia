@@ -32,7 +32,7 @@ struct ContentView: View {
         }
         .tint(.green)
         .onChange(of: cacheManager.loadFromDiskComplete) { complete in
-            if complete {
+            if complete && cacheManager.savedRecipes.count > 0 {
                 self.recipesViewModel.add(recipes: cacheManager.savedRecipes)
             }
         }
