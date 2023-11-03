@@ -25,6 +25,7 @@ class RecipesViewModel: ObservableObject {
             self.searchRecipes(with: searchKeyword)
         }
     }
+    @Published var errorMessage = ""
     
     private let service: RecipeService
     private var subscriptions = Set<AnyCancellable>()
@@ -51,7 +52,6 @@ class RecipesViewModel: ObservableObject {
     private func searchRecipes(with keyword: String) {
         guard self.viewState != .searching else { return }
         
-        print("############### loading more recipes for current page: \(currentPage)")
         self.viewState = .searching
         
         self.service
@@ -60,10 +60,16 @@ class RecipesViewModel: ObservableObject {
             .sink(receiveCompletion: { finished in
                 switch finished {
                     case .finished: print("finished")
-                    case .failure(_):  self.viewState = .error
+                    case .failure(let error):
+                        guard let apiError = error as? APIError else {
+                            return }
+                        self.viewState = .error
+                        // TODO: - additional messages for other errors
+                        if apiError == .unauthorized {
+                            self.errorMessage = "You are unauthorized to download recipes. Please check your API key."
+                        }
                 }
             }, receiveValue: { response in
-                // TODO remove dups
                 self.recipes.append(contentsOf: response.results)
                 self.viewState = .normal
             })
@@ -92,5 +98,9 @@ extension RecipesViewModel {
     
     func add(recipes: [Recipe]) {
         self.savedRecipes = recipes
+    }
+    
+    func isSaved(for id: Int) -> Bool {
+        return savedRecipes.contains(where: { $0.id == id })
     }
 }

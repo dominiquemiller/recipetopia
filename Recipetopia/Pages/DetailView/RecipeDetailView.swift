@@ -23,7 +23,7 @@ struct RecipeDetailView: View {
                                 CacheManager.shared.updateSavedRecipes(for: recipe, saved: isSaved)
                                 buttonAction?(recipe, isSaved)
                             } label: {
-                                Image(systemName: recipe.saved ? "heart.fill" : "heart")
+                                Image(systemName: isSaved ? "heart.fill" : "heart")
                                     .imageScale(.large)
                                     .foregroundColor(Color.pink)
                             }
@@ -115,6 +115,9 @@ struct RecipeDetailView: View {
             if viewModel.viewState == .loading {
                 ProgressView()
             }
+        }
+        .alert(viewModel.errorMessage, isPresented: .constant(self.viewModel.viewState == .error)) {
+            Button("OK", role: .cancel) { }
         }
     }
 }

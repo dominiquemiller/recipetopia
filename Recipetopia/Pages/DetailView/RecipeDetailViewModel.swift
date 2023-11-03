@@ -15,6 +15,7 @@ class RecipeDetailViewModel: ObservableObject {
     
     @Published var recipe: Recipe? = nil
     @Published var viewState: ViewState = .normal
+    @Published var errorMessage = ""
     
     private let recipeId: Int
     private let service: RecipeService
@@ -35,7 +36,14 @@ class RecipeDetailViewModel: ObservableObject {
             .sink(receiveCompletion: { finished in
                 switch finished {
                     case .finished: self.viewState = .normal
-                    case .failure(_):  self.viewState = .error
+                    case .failure(let error):
+                        guard let apiError = error as? APIError else {
+                            return }
+                        self.viewState = .error
+                        // TODO: - additional messages for other errors
+                        if apiError == .unauthorized {
+                            self.errorMessage = "You are unauthorized to download recipes. Please check your API key."
+                        }
                 }
             }, receiveValue: { response in
                 self.recipe = response

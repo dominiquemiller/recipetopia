@@ -11,13 +11,7 @@ class CacheManager: ObservableObject {
     @Published var loadFromDiskComplete = false
     
     private let fileName = "savedRecipes.json"
-    var savedRecipes: [Recipe] = [] {
-        didSet {
-            print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ CacheManager")
-            print(savedRecipes.count)
-            print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-        }
-    }
+    var savedRecipes: [Recipe] = []
     
     static let shared = CacheManager()
     
@@ -43,7 +37,7 @@ class CacheManager: ObservableObject {
         
         // Begin decoding
         guard let jsonData = try? Data(contentsOf: cachedFile) else { return }
-        print("$$$$$$$$$$$$$$$$$$$$$$$ CacheManager begining decoding")
+        
         let decoder = JSONDecoder()
         do {
             self.savedRecipes = try decoder.decode([Recipe].self, from: jsonData)

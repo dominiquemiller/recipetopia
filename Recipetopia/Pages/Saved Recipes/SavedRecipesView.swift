@@ -14,7 +14,8 @@ struct SavedRecipesView: View {
         ZStack {
             List(viewModel.savedRecipes) { recipe in
                 NavigationLink {
-                    RecipeDetailView(viewModel: RecipeDetailViewModel(id: recipe.id, service: SpoonacularAPI()))
+                    RecipeDetailView(viewModel: RecipeDetailViewModel(id: recipe.id, service: SpoonacularAPI()), 
+                                     isSaved: true) { self.viewModel.updateSavedRecipe(recipe: $0, saved: $1) }
                 } label: {
                     VStack(alignment: .leading) {
                         AsyncImage(url: recipe.image) { image in
