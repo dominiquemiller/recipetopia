@@ -123,5 +123,9 @@ struct RecipeDetailView: View {
 }
 
 #Preview {
-    RecipeDetailView(viewModel: RecipeDetailViewModel(id: 782585, service: SpoonacularAPI()))
+    let viewModel = RecipeDetailViewModel(id: 782585, service: SpoonacularAPI())
+    return PreviewDataWrapper(filename: "recipe", model: Recipe.self) { recipe in
+        viewModel.recipe = recipe
+        return RecipeDetailView(viewModel: viewModel)
+    }
 }

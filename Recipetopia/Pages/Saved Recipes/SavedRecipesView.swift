@@ -47,6 +47,10 @@ struct SavedRecipesView: View {
 }
 
 #Preview {
-    SavedRecipesView()
-        .environmentObject(RecipesViewModel(service: SpoonacularAPI()))
+    let viewModel = RecipesViewModel(service: SpoonacularAPI())
+    return PreviewDataWrapper(filename: "searchRecipes", model: SearchResults.self) { searchResults in
+        viewModel.savedRecipes = searchResults.results
+        return SavedRecipesView()
+            .environmentObject(viewModel)
+    }
 }

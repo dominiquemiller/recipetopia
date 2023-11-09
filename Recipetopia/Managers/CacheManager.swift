@@ -56,4 +56,8 @@ class CacheManager: ObservableObject {
         guard let data = try? encoder.encode(self.savedRecipes) else { return }
         try? data.write(to: fileURL)
     }
+    
+    func hasSavedRecipes() -> Bool {
+        return savedRecipes.count > 0
+    }
 }
